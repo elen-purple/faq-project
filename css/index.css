@@ -1,0 +1,56 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Стилі для питання */
+.question {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question h3 {
+  margin: 0;
+}
+
+/* Стилі для відповіді */
+.answer {
+  transition: all 0.5s;
+  box-sizing: border-box;
+  padding: 0 10px;
+  max-height: 0;
+  /* overflow: hidden; */
+}
+
+.question.open + .answer {
+  transform: scaleY(1);
+  max-height: 600px;
+  padding: 10px;
+}
+
+.answer p {
+  margin: 0;
+}
+
+/* Стилі для іконки (+ / -) */
+.icon {
+  font-size: 18px;
+  font-weight: bold;
+  user-select: none; /* Вимикає виділення тексту при кліку */
+}
